@@ -7,8 +7,17 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    username: 'aaaa',
+    password: 'aaaa'
   },
+  changeInput(e) { 
+    let changed = {};
+     let prop = e.currentTarget.dataset.prop   
+     changed[prop] = e.detail.value; this.setData(changed)
+    this.setData(changed)
+    console.log(changed);
+      },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

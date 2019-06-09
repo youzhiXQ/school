@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--  
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -10,4 +10,5 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+</view> -->
+<view>  <input placeholder='用户名' value='{{username}}' bindinput='changeInput' data-prop='username'></input>  <input placeholder='密码'  value='{{password}}' bindinput='changeInput' data-prop='password'></input></view>

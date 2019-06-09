@@ -11,7 +11,13 @@ Page({
     chosen: '',
     buylist: [],
   },
-  
+  changeInput(e) {
+    let changed = {};
+    let prop = e.currentTarget.dataset.prop
+    changed[prop] = e.detail.value; this.setData(changed)
+    this.setData(changed)
+    console.log(changed);
+  },
   onLoad(option) {
     var that = this;
     var  app=getApp();
@@ -83,23 +89,47 @@ Page({
       pickerHidden: false
     })
   },
-
+  radioChange(e){
+    this.setData({
+      redio_id: e.detail.value
+    })
+ 
+  },
   formSubmit(e) {
-   
-   
-    var fields=[];
-    // map=new Map();
-    // map.set(value, "");
+    console.log(e.detail.value);
+    var fields = { };
+    var name;
+    var sex;
+    var phone;
+    var myid;
+    var classid ;
     for(var i=0;i<this.data.formdata.length;i++){
-      var paras = this.data.formdata.fieldName;
+      // var paras = this.data.formdata[i].fieldName;
       // console.log(this.data.formdata[i].id);
-      // map.set(fieldid, this.data.formdata[i].id);
-      // console.log(e.detail.value.姓名);
-      console.log(paras);
+      // map.set("fieldid", this.data.formdata[i].id);
+      // if (e.detail.value.search("姓名")!=-1){
+      //   console.log("paras");
+      // }
+        name=e.detail.value.姓名;
+        sex = e.detail.value.性别;
+        phone = e.detail.value.手机号;
+        myid = e.detail.value.身份证;
+        classid = e.detail.value.准考证号;
+        fields.fieldid= this.data.formdata[i].id;
     }
     ;
+    if (this.data.redio_id == undefined) {
+      sex = "男";
+    }else{
+      sex = this.data.redio_id;
+    }
+    fields.value = name;
+    fields.value= sex;
+    fields.value = phone;
+    fields.value= myid;
+    fields.value = classid;
    
-    // console.log(map);
+    console.log(fields);
     // // 提交事件
     // if (e.detail.value.姓名.length == 0 || e.detail.value.姓名.length == 0) {
     //   wx.showToast({

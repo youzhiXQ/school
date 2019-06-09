@@ -13,17 +13,18 @@
              <label  >{{item.fieldName}}</label>
             <view class="weui-cell__bd">
             <!--  姓名-->
-              <input  id="{{item.id}}"  wx:if="{{item.fieldType=='string'}}"  class="weui-input" name="{{item.fieldName}}" placeholder="请输入{{item.fieldName}}" />
+              <input   data-prop='myfield'  id="{{item.id}}"  wx:if="{{item.fieldType=='string'}}"  class="weui-input" name="{{item.id}}" placeholder="请输入{{item.fieldName}}" />
 
                 <!-- 性别 -->
                 
    
             <view   wx:if="{{item.fieldType=='radiobox'}}">
+            <radio-group class="radio-group"  bindchange="radioChange" >
              <label class="radio">
-        <radio     name="{{item.fieldName}}"  checked="true" />{{rediosss[0]}}
-           <radio   name="{{item.fieldName}}"    />{{rediosss[1]}}
+        <radio      name="{{item.fieldName}}" value="{{rediosss[0]}}" checked="true" />{{rediosss[0]}}
+           <radio      name="{{item.fieldName}}"  value="{{rediosss[1]}}" />{{rediosss[1]}}
           </label>
-      
+      </radio-group>
             </view>
 
 
