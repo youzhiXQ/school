@@ -1,0 +1,52 @@
+
+
+  <scroll-view class="page-body"    data-id="{{item.id}}">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+   <block wx:for-items="{{formdata}}" wx:key="{{item.id}}">
+
+<label wx:if="{{item.fieldName=='姓名'}}"  >个人信息</label>
+<label wx:elif="{{item.fieldName=='准考证号'||item.fieldName=='建档号'||item.fieldName=='总分'}}">考试信息</label>
+     <label wx:elif="{{item.fieldName=='需要住宿'||item.fieldName=='意向专业'}}" >意向信息</label>
+    
+        <view  class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+             <label  >{{item.fieldName}}</label>
+            <view class="weui-cell__bd">
+            <!--  姓名-->
+              <input  id="{{item.id}}"  wx:if="{{item.fieldType=='string'}}"  class="weui-input" name="{{item.fieldName}}" placeholder="请输入{{item.fieldName}}" />
+
+                <!-- 性别 -->
+                
+   
+            <view   wx:if="{{item.fieldType=='radiobox'}}">
+             <label class="radio">
+        <radio     name="{{item.fieldName}}"  checked="true" />{{rediosss[0]}}
+           <radio   name="{{item.fieldName}}"    />{{rediosss[1]}}
+          </label>
+      
+            </view>
+
+
+  <view wx:if="{{item.fieldType=='switch'}}" class="weui-cell__bd">
+            <switch   wx:if="{{item.fieldType=='switch'}}"   name="{{item.fieldName}}"/>
+            </view>
+
+
+            </view>          
+          </view>
+        </view>
+      
+ 
+
+</block>
+      
+      <view class="btn-area">
+        <button type="primary" formType="submit">立即提交</button>
+      </view>
+
+
+
+
+
+    </form>
+  </scroll-view>

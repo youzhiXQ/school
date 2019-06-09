@@ -1,0 +1,46 @@
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="*this">
+          <swiper-item>
+            <image  src="{{item}}"   ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+
+<view>
+
+ <text  decode="{{true}}" >&nbsp;&nbsp;&nbsp;</text>
+      <image  bindtap="admissionBrochure" class='image-right' style="width:60px;height:60px"   src="../image/1.jpg"></image>
+
+       <image bindtap="professionalIntroduction" class='image-right'  style="width:60px;height:60px"   src="../image/2.jpg"></image>
+           <image bindtap="questionsAndAnswers"  class='image-right'  style="width:60px;height:60px"   src="../image/3.jpg"></image>
+               <image bindtap="onlineadd" class='image-right'  style="width:60px;height:60px"   src="../image/4.jpg"></image>
+               </view>
+               
+               <view>
+                <text  decode="{{true}}" >&nbsp;&nbsp;&nbsp;</text>
+               <text  bindtap="admissionBrochure" class='text-right' >招生简章</text>
+              
+                 <text  bindtap="professionalIntroduction" class='text-right' >专业介绍</text>
+                   <text  bindtap="questionsAndAnswers" class='text-right' >招生问答</text>
+                     <text class='text-right' bindtap="onlineadd" >在线申请</text>
+               </view>
+
+       <view>
+        <text  decode="{{true}}" >&nbsp;&nbsp;&nbsp;</text>
+       <label  class="zhaosheng-font">招生动态</label>
+       </view>       
+
+      
+<scroll-view  wx:for="{{newsdata}}">
+    <view  style='height:60px;width:100%'>
+    <!-- <image    style="width:30%;height:50%"   src="{{item.img}}"></image> -->
+    <!-- <image    style="width:30%;height:50%"   src="../image/2.jpg"></image> -->
+      <!-- <image    style="width:80px;height:60px"   src="{{item.img}}"></image> -->
+        <image    style="float:left;width:80px;height:60px"   src="../image/2.jpg"></image>
+  <view  ><label>{{item.title}}</label></view>  
+    <view><text  >{{item.subtitle}}</text></view> 
+     <view><label >{{item.ctime}}</label></view>
+    </view>
+ </scroll-view>
+ 
