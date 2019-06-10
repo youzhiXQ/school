@@ -3,18 +3,23 @@
       
       
 <scroll-view  wx:for="{{answerdata}}">
-    <view   style='height:80px;width:100%;background-color:#DBDBDB;'>
+    <view   style='height:30%;width:100%;background-color:#DBDBDB;'>
     <view  >
-     <label  style='background-color: #FF4500;color:white'>问</label>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+     <label  style='background-color: #FF4500;color:white;'>问</label>
+      <text decode="{{true}}">&nbsp;</text>
      <label style='font-size:14px;'> {{item.question}}</label>
     </view>
    
      <view>
-     <label style='background-color: #00CD00;color:white'>答 </label>
+     <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+     <label style='background-color: #00CD00;color:white'>答</label>
+     <text decode="{{true}}">&nbsp;</text>
      <label style='font-size:14px;'>  {{item.answer}}</label>
     </view>
      
          <view>
+         <text decode="{{true}}">&nbsp;</text>
      <label style='font-size:12px;color:#AAAAAA'>全部一个回答</label>
      <label style='float:right;font-size:12px;color:#AAAAAA'>更新于{{item.answerTime}}</label>
     </view>

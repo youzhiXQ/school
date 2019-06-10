@@ -1,0 +1,22 @@
+<view>
+<view style='padding-top:20%;'>
+
+<label>
+请选择你的角色:
+</label>
+
+</view>
+
+<view  style='padding-left:30%;'>
+<view>
+<button bindtap="student" class="buttonstudent">学生</button>
+</view>
+
+
+<view>
+<button  bindtap="teacher" class="buttonteacher">老师</button>
+</view>
+
+</view>
+
+</view>

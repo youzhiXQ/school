@@ -1,7 +1,9 @@
 {
   "pages": [
- 
+  "pages/role/role",
     "pages/swiper/swiper",
+   
+  "pages/regedit/regedit",
     "pages/answer/answer",
     "pages/form/form",
     "pages/tab/tab",

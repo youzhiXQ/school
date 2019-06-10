@@ -1,0 +1,27 @@
+<view>
+<view style='padding-top:20%;'>
+ 
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view  class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+             <label style="font-size:15px;" >姓名</label>
+            <view class="weui-cell__bd">
+            <!--  姓名-->
+              <input style="font-size:15px;padding-left:10px;"  data-prop='myfield'  id="{{item.id}}"    class="weui-input" name="name" placeholder="请输入你的姓名" />
+</view></view></view>
+
+
+
+      <view class="btn-area">
+        <button type="primary" formType="submit">立即提交</button>
+      </view>
+
+
+</form>
+
+</view>
+
+ 
+ 
+
+</view>

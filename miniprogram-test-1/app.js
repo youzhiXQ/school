@@ -1,4 +1,7 @@
-//app.js
+var network = require("/utils/network.js")
+
+
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -10,6 +13,23 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          var app = getApp();
+          //发起网络请求
+          wx.request({
+            url: app.globalData.schoolurl + "/user/wxlogin",
+            data: {
+              wxcode: res.code
+            }
+          })
+        } else {
+          // console.log('登录失败！' + res.errMsg)
+          wx.navigateTo({
+            url: '../role/role',
+          })
+        }
+
+
       }
     })
     // 获取用户信息
