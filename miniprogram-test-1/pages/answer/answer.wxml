@@ -1,0 +1,20 @@
+    
+ 
+      
+      
+<scroll-view  wx:for="{{newsdata}}">
+    <view  style='height:60px;width:100%'>
+    <view>
+     <label>问</label>
+     <label>问</label>
+    </view>
+   
+     <view>
+     <label>答</label>
+     <label>问</label>
+    </view>
+     
+   
+    </view>
+ </scroll-view>
+ 

@@ -122,9 +122,7 @@ wx.navigateTo({
   },
   // 招生问答
   questionsAndAnswers:function(e){
-    wx.navigateTo({
-      url: '../answer/answer',
-    })
+
   },
   changeIndicatorDots() {
     this.setData({

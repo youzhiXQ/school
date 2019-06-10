@@ -1,0 +1,50 @@
+/* @import "../common/lib/weui.wxss"; */
+
+button{
+  margin-bottom: 30rpx;
+}
+button:last-child{
+  margin-bottom: 0;
+}
+.page-section-title{
+  padding: 0;
+}
+.swiper-item{
+  display: block;
+  height: 150px;
+}
+.page-section-title{
+  margin-top: 60rpx;
+  position: relative;
+}
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+.page-foot{
+  margin-top: 50rpx;
+}
+
+
+.weui-agree__link {
+  display: inline;
+  color: #586c94;
+}
+
+
+
+.image-right{
+  margin-right: 17px;
+}
+.text-right{
+  margin-right: 27px;
+}
+.zhaosheng-font{
+color: #D0D0D0;
+font-size: 16px;
+}
+
+
+

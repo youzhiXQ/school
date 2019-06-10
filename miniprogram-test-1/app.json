@@ -2,9 +2,10 @@
   "pages": [
  
     "pages/swiper/swiper",
+    "pages/answer/answer",
     "pages/form/form",
-     "pages/tab/tab",
-      "pages/admissionBrochure/admissionBrochure",
+    "pages/tab/tab",
+    "pages/admissionBrochure/admissionBrochure",
     "pages/index/index",
     "pages/logs/logs"
   ],
