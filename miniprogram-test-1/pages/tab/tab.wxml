@@ -11,20 +11,23 @@
 
 <swiper-item wx:for="{{tabdata}}"  class='swiper'>
 <view class='recordItem'>
-<view class='name'>{{item.proInfo}}</view>
+   <rich-text nodes="{{item.proInfo}}"></rich-text>
+<!-- <view class='name'>{{item.proInfo}}</view> -->
 </view>
 </swiper-item>
 
 <swiper-item class='swiper' class='swiper'>
       <view   class='recordItem'>
-        <view class='name'>{{item.proInfo}}</view>
+      <rich-text nodes="{{item.proInfo}}"></rich-text>
+        <!-- <view class='name'>{{item.proInfo}}</view> -->
       </view>
     </swiper-item>
 
 
     <swiper-item class='swiper' class='swiper'>
       <view class='recordItem'>
-        <view class='name'>{{item.proInfo}}</view>
+      <rich-text nodes="{{item.proInfo}}"></rich-text>
+        <!-- <view class='name'>{{item.proInfo}}</view> -->
       </view>
     </swiper-item>
 

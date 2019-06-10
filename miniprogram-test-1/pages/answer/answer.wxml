@@ -2,19 +2,41 @@
  
       
       
-<scroll-view  wx:for="{{newsdata}}">
-    <view  style='height:60px;width:100%'>
-    <view>
-     <label>问</label>
-     <label>问</label>
+<scroll-view  wx:for="{{answerdata}}">
+    <view   style='height:80px;width:100%;background-color:#DBDBDB;'>
+    <view  >
+     <label  style='background-color: #FF4500;color:white'>问</label>
+     <label style='font-size:14px;'> {{item.question}}</label>
     </view>
    
      <view>
-     <label>答</label>
-     <label>问</label>
+     <label style='background-color: #00CD00;color:white'>答 </label>
+     <label style='font-size:14px;'>  {{item.answer}}</label>
     </view>
      
+         <view>
+     <label style='font-size:12px;color:#AAAAAA'>全部一个回答</label>
+     <label style='float:right;font-size:12px;color:#AAAAAA'>更新于{{item.answerTime}}</label>
+    </view>
    
     </view>
+<view  style="background-color:white;height:4px;"> 
+
+</view>
+     
  </scroll-view>
- 
+  <view>
+     <text style='font-size:12px;color:#AAAAAA'  decode="{{true}}" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----------你看到我的底线了-----------&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    </view>
+
+
+<!-- 
+
+   <view class="search-cell">
+      <view class="weui-cell__bd">
+        <input class="input-search" placeholder="向老师提问"  value="{{inputVal}}"/>
+      </view>
+      <view class="weui-cell__ft">
+       <button class="btn-search" type="primary" >提问</button>
+      </view>
+    </view>  -->

@@ -3,25 +3,15 @@
 Page({
   onShareAppMessage() {
     return {
-      
-      title: 'swiper',
-      path: 'pages/swiper/swiper'
+    
+      title: 'answer',
+      path: 'pages/answer/answer'
     }
   },
 
   data: {
-    // background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
-    indicatorDots: true,
-    vertical: false,
-    autoplay: true,
-    interval: 2000,
-    duration: 500,
-   
+  
+  
   },
 
   onLoad(option) {
@@ -30,7 +20,7 @@ Page({
    
     //ajax请求数据
     wx.request({
-      url: app.globalData.schoolurl + "/enroll/getnews",
+      url: app.globalData.schoolurl + "/enroll/getquestion",
       method: "post",
       data: {},
       success: function (res) {
@@ -39,12 +29,12 @@ Page({
         var date = res.data.data;
         var time = require('../../utils/util.js');
         for(var i=0;i<date.length;i++){
-          date[i].ctime = time.formatTimeTwo((date[i].ctime / 1000).toFixed(3), 'Y/M/D h:m:s')
+          date[i].answerTime = time.formatTimeTwo((date[i].ctime / 1000).toFixed(3), 'Y/M/D h:m:s')
         }
        if (status == 1) {
         
           that.setData({
-            newsdata: date,
+            answerdata: date,
           })
 
 
